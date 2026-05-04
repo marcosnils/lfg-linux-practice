@@ -1,0 +1,12 @@
+type BootstrappingAlpineWithApkStatic {
+
+  pub build: File! @check {
+    container().from("alpine").
+    withDirectory("/setup",git("github.com/marcosnils/alpine-linux-self-setup").branch("patch-1").tree()).
+    withExec(["apk", "add", "bash", "curl", "jq"]).
+    withWorkdir("/setup").
+    withExec(["bash", "bootstrap.sh", "alpine.tar", "example.json"], insecureRootCapabilities: true).
+    file("alpine.tar")
+  }
+
+}

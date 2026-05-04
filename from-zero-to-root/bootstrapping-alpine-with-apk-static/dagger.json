@@ -1,0 +1,7 @@
+{
+  "name": "bootstrapping-alpine-with-apk-static",
+  "engineVersion": "v0.20.6",
+  "sdk": {
+    "source": "dang"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "lfg-linux-practice",
+  "engineVersion": "v0.20.6",
+  "toolchains": [
+    {
+      "name": "bootstrapping-alpine-with-apk-static",
+      "source": "from-zero-to-root/bootstrapping-alpine-with-apk-static"
+    }
+  ]
+}
